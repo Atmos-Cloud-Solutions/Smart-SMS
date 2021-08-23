@@ -10,7 +10,7 @@ def sms(contact, message):
     }
 
     headers = {'content-type': 'application/x-www-form-urlencoded',
-               'Authorization': 'Basic <Token>'}
+               'Authorization': os.environ.get('TOKEN')}
 
     r = requests.post(url, data=payload, headers=headers)
     print(r.status_code)
