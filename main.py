@@ -10,12 +10,14 @@ def sms(contact, message):
     }
 
     headers = {'content-type': 'application/x-www-form-urlencoded',
-               'Authorization': 'Basic cG5wLnByYnNAcG5wLmdvdi5waDpQcmJzQDIwMjE='}
+               'Authorization': 'Basic <Token>'}
 
     r = requests.post(url, data=payload, headers=headers)
     print(r.status_code)
 
 
 if __name__ == '__main__':
-    sms("09168845698", "Testing lang e hahaha kevs to")
+    mobile_number = ""
+    body = ""
+    sms(mobile_number, body)
 
